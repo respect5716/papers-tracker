@@ -12,6 +12,7 @@ from email.mime.text import MIMEText
 
 def read_seeds(fpath):
     id_list = open(fpath, 'r').read().split('\n')
+    id_list = [i for i in id_list if i]
     res = arxiv.Search(id_list=id_list).results()
     title_list = [r.title for r in res]
     seeds = pd.DataFrame({'title': title_list, 'arxiv_id': id_list})

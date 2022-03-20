@@ -35,7 +35,7 @@ jobs:
           cache: 'pip'
       
       - name: Install requirements
-        run: pip install -r requirements.txt --no-cache-dir
+        run: pip install -r requirements.txt
         
       - name: Run script
         env:

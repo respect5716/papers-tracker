@@ -21,7 +21,7 @@ Write the arxiv ids of papers which you want to follow on the `papers.txt`.
 ### 3. Set variables
 This application sends you the results by email. Thus you need to set you email information as environment variables.
 Only google gmail was tested, so if you want to send to other emails, you need to test it.
-The EMAIL_PASSWORD is an [app password](https://support.google.com/accounts/answer/185833?hl=en), which doesn't mean your google password.
+The `EMAIL_PASSWORD` is an [app password](https://support.google.com/accounts/answer/185833?hl=en), which doesn't mean your google password.
 
 ```
 export EMAIL_ADDRESS=my_email_address

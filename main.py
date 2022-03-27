@@ -1,5 +1,6 @@
 import os
 import re
+import time
 import requests
 from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
@@ -84,6 +85,10 @@ def main():
         followers = search_followers(fid_list)
         followers = followers.loc[followers['date'] == date]
         citations[arxiv_id] = followers
+        print(f'{arxiv_id} finished')
+        time.sleep(10)
+
+
     doc = write_doc(seeds, citations)
 
     smtp = smtplib.SMTP('smtp.gmail.com', 587)
